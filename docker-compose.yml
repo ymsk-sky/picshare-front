@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  workspace:
+    build:
+      context: docker/workspace/
+      dockerfile: Dockerfile
+    container_name: picshare-workspace
+    ports:
+      - "8080:8080"
+    tty: true
+    volumes:
+      - ./src:/app
